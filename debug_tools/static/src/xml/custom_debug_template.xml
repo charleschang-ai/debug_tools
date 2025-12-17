@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template xml:space="preserve">
+    <t t-name="custom_demo.debug_template">
+        <div class="p-0" t-ref="debugArea">
+            <Dropdown position="'bottom-end'" beforeOpen.bind="onBeforeOpen">
+                <div>
+                    <i class="fa fa-lg fa-bug text-warning" role="img" aria-label="Debug Mode" > </i>
+                </div>
+                 <t t-set-slot="content">
+                    <div class="o-mail-ActivityMenu bg-view flex-grow-1 d-flex flex-column" style="min-height: auto;">
+                        <div class="d-flex flex-column list-group-flush">
+                            <t t-foreach="debugOptions" t-as="option" t-key="option.text">
+                                <t t-if="option.condition">
+                                    <DropdownItem class="`d-flex align-items-center`" onSelected="option.onclick">
+                                        <div class="o-mail-ActivityGroup list-group-item list-group-item-action d-flex py-1 px-2 cursor-pointer">
+                                            <i class="fa fa-lg me-2" t-att-class="option.icon"></i>
+                                            <t t-out="option.text" />
+                                        </div>
+                                    </DropdownItem>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                 </t>
+            </Dropdown>
+        </div>
+
+    </t>
+</template>
