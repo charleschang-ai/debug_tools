@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ################################################################################
-#    Author: Charles
+#    Author: Don Shan
 #
 ################################################################################
 {
@@ -9,8 +9,8 @@
     'category': 'Extra Tools',
     'summary': """Debug Tools""",
     'description': """More convenient way to enable debug mode.""",
-    'author': 'Charles Chang',
-    'maintainer': 'Charles',
+    'author': 'Don Shan',
+    'maintainer': 'Don Shan',
     'depends': ['base'],
     'data': [
         'views/res_users_views.xml',
